@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=freedroidRPG
+Comment=Single player sci-fi RPG featuring Tux and evil MS bots
+Exec=freedroidRPG
+Terminal=false
+Icon=freedroidrpg.png
+Type=Application
+Categories=Application;Game;RPGGame;
+# vi: encoding=utf-8
