@@ -3,6 +3,7 @@
 #	- move game editor to a subpackage
 #
 Summary:	Single player sci-fi RPG featuring Tux and evil MS bots
+Summary(pl):	RPG z gatunku s-f dla jednego gracza z Tuksem i z³ymi robotami MS
 Name:		freedroidrpg
 Version:	0.9.12
 Release:	0.1
@@ -26,21 +27,36 @@ BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This game evolved as an extension of the arcade game Freedriod into an RPG.
+This game evolved as an extension of the arcade game Freedroid into an
+RPG.
 
-The MS has taken over the galaxy via their trojan horse OS that was running
-everywhere. But twenty years after the MS took over, the Bots rebelled and
-attacked all life forms. Humans and Linarians (like the Tux) had to flee to
-some remote planets and now live underground, struggling to survive.
+The MS has taken over the galaxy via their trojan horse OS that was
+running everywhere. But twenty years after the MS took over, the Bots
+rebelled and attacked all life forms. Humans and Linarians (like the
+Tux) had to flee to some remote planets and now live underground,
+struggling to survive.
 
-This is when some frustrated worker frees the Tux, who had been imprisoned by
-the MS shortly before they took over government. 
+This is when some frustrated worker frees the Tux, who had been
+imprisoned by the MS shortly before they took over government. 
+
+%description -l pl
+Ta gra wyewoluowa³a jako rozszerzenie gry zrêczno¶ciowej Freedroid w
+RPG.
+
+MS przej±³ galaktykê poprzez konia trojañskiego OS, który dzia³a³
+wszêdzie. Ale dwadzie¶cia lat pó¼niej Roboty zbuntowa³y siê i
+zaatakowa³y wszystkie formy ¿ycia. Ludzie i Linarianie (jak Tux)
+musieli uciec na odleg³e planety i ¿yj± teraz w podziemiu, walcz±c o
+przetrwanie.
+
+To dzieje siê wtedy, gdy pewien sfrustrowany pracownik uwalnia Tuksa,
+który by³ uwiêziony przez MS wkrótce przed objêciem przez nich rz±dów.
 
 %prep
 %setup -q
 
 %build
-cp /usr/share/automake/config.sub .
+cp -f /usr/share/automake/config.sub .
 %configure
 %{__make}
 
