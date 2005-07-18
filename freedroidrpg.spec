@@ -5,12 +5,12 @@
 Summary:	Single player sci-fi RPG featuring Tux and evil MS bots
 Summary(pl):	RPG z gatunku s-f dla jednego gracza z Tuksem i z³ymi robotami MS
 Name:		freedroidrpg
-Version:	0.9.12
-Release:	0.1
+Version:	0.9.13
+Release:	0.rc2.1
 License:	GPL
 Group:		X11/Applications/Games
-Source0:	http://dl.sourceforge.net/freedroid/%{name}-%{version}.tar.bz2
-# Source0-md5:	5b8b8e74e641c73645a7597ca8515707
+Source0:	http://dl.sourceforge.net/freedroid/%{name}-%{version}-rc2.tar.bz2
+# Source0-md5:	eda34581d784cbd1db59ebc46208880e
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 URL:		http://freedroid.sourceforge.net/
@@ -53,7 +53,7 @@ To dzieje siê wtedy, gdy pewien sfrustrowany pracownik uwalnia Tuksa,
 który by³ uwiêziony przez MS wkrótce przed objêciem przez nich rz±dów.
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}-rc2
 
 %build
 cp -f /usr/share/automake/config.sub .
