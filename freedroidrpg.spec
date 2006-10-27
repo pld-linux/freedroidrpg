@@ -1,16 +1,17 @@
 #
-# TODO:
-#	- move game editor to a subpackage
+# Conditional build
+%bcond_without	tools	# without game tools
 #
+%define		_rc	rc3
 Summary:	Single player sci-fi RPG featuring Tux and evil MS bots
 Summary(pl):	RPG z gatunku s-f dla jednego gracza z Tuksem i z³ymi robotami MS
 Name:		freedroidrpg
 Version:	0.9.13
-Release:	0.rc2.1
-License:	GPL
+Release:	0.%{_rc}.1
+License:	GPL v2+
 Group:		X11/Applications/Games
-Source0:	http://dl.sourceforge.net/freedroid/%{name}-%{version}-rc2.tar.bz2
-# Source0-md5:	eda34581d784cbd1db59ebc46208880e
+Source0:	http://dl.sourceforge.net/freedroid/freedroidRPG-%{version}-%{_rc}.tar.bz2
+# Source0-md5:	4c31c93b4a4cad94b25de41ee43ed392
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 URL:		http://freedroid.sourceforge.net/
@@ -37,7 +38,7 @@ Tux) had to flee to some remote planets and now live underground,
 struggling to survive.
 
 This is when some frustrated worker frees the Tux, who had been
-imprisoned by the MS shortly before they took over government. 
+imprisoned by the MS shortly before they took over government.
 
 %description -l pl
 Ta gra wyewoluowa³a jako rozszerzenie gry zrêczno¶ciowej Freedroid w
@@ -52,8 +53,21 @@ przetrwanie.
 To dzieje siê wtedy, gdy pewien sfrustrowany pracownik uwalnia Tuksa,
 który by³ uwiêziony przez MS wkrótce przed objêciem przez nich rz±dów.
 
+%package tools
+Summary:	Tools for freefroidrpg
+Summary(pl):	Narzêdzia dla freedroidrpg
+Group:		X11/Applications/Games
+Requires:	%{name} = %{version}-%{release}
+
+%description tools
+Item and dialog editor for freedroidrpg with other tools.
+
+%description tools -l pl
+Edytor przedmiotów i dialogów dla freedroidrpg wraz z innymi
+narzêdziami.
+
 %prep
-%setup -q -n %{name}-%{version}-rc2
+%setup -q -n %{name}-%{version}-%{_rc}
 
 %build
 cp -f /usr/share/automake/config.sub .
@@ -76,8 +90,16 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS NEWS README TODO
-%attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_bindir}/freedroidRPG
 %{_datadir}/%{name}
 %{_desktopdir}/*
 %{_pixmapsdir}/*
 %{_mandir}/man6/*
+
+%if %{with tools}
+%files tools
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_bindir}/*Editor
+%attr(755,root,root) %{_bindir}/croppy
+%attr(755,root,root) %{_bindir}/pngtoico
+%endif
