@@ -2,16 +2,15 @@
 # Conditional build
 %bcond_without	tools	# without game tools
 #
-%define		_rc	rc3
 Summary:	Single player sci-fi RPG featuring Tux and evil MS bots
 Summary(pl):	RPG z gatunku s-f dla jednego gracza z Tuksem i z³ymi robotami MS
 Name:		freedroidrpg
 Version:	0.9.13
-Release:	0.%{_rc}.1
+Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Games
-Source0:	http://dl.sourceforge.net/freedroid/freedroidRPG-%{version}-%{_rc}.tar.bz2
-# Source0-md5:	4c31c93b4a4cad94b25de41ee43ed392
+Source0:	http://dl.sourceforge.net/freedroid/%{name}-%{version}.tar.bz2
+# Source0-md5:	d57e366a69e8999f5f0e30e960f72d15
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 URL:		http://freedroid.sourceforge.net/
@@ -67,7 +66,7 @@ Edytor przedmiotów i dialogów dla freedroidrpg wraz z innymi
 narzêdziami.
 
 %prep
-%setup -q -n %{name}-%{version}-%{_rc}
+%setup -q 
 
 %build
 cp -f /usr/share/automake/config.sub .
