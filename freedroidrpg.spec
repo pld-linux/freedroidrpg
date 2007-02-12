@@ -3,7 +3,7 @@
 %bcond_without	tools	# without game tools
 #
 Summary:	Single player sci-fi RPG featuring Tux and evil MS bots
-Summary(pl):	RPG z gatunku s-f dla jednego gracza z Tuksem i z³ymi robotami MS
+Summary(pl.UTF-8):   RPG z gatunku s-f dla jednego gracza z Tuksem i zÅ‚ymi robotami MS
 Name:		freedroidrpg
 Version:	0.10.0
 Release:	1
@@ -39,31 +39,31 @@ struggling to survive.
 This is when some frustrated worker frees the Tux, who had been
 imprisoned by the MS shortly before they took over government.
 
-%description -l pl
-Ta gra wyewoluowa³a jako rozszerzenie gry zrêczno¶ciowej Freedroid w
+%description -l pl.UTF-8
+Ta gra wyewoluowaÅ‚a jako rozszerzenie gry zrÄ™cznoÅ›ciowej Freedroid w
 RPG.
 
-MS przej±³ galaktykê poprzez konia trojañskiego OS, który dzia³a³
-wszêdzie. Ale dwadzie¶cia lat pó¼niej Roboty zbuntowa³y siê i
-zaatakowa³y wszystkie formy ¿ycia. Ludzie i Linarianie (jak Tux)
-musieli uciec na odleg³e planety i ¿yj± teraz w podziemiu, walcz±c o
+MS przejÄ…Å‚ galaktykÄ™ poprzez konia trojaÅ„skiego OS, ktÃ³ry dziaÅ‚aÅ‚
+wszÄ™dzie. Ale dwadzieÅ›cia lat pÃ³Åºniej Roboty zbuntowaÅ‚y siÄ™ i
+zaatakowaÅ‚y wszystkie formy Å¼ycia. Ludzie i Linarianie (jak Tux)
+musieli uciec na odlegÅ‚e planety i Å¼yjÄ… teraz w podziemiu, walczÄ…c o
 przetrwanie.
 
-To dzieje siê wtedy, gdy pewien sfrustrowany pracownik uwalnia Tuksa,
-który by³ uwiêziony przez MS wkrótce przed objêciem przez nich rz±dów.
+To dzieje siÄ™ wtedy, gdy pewien sfrustrowany pracownik uwalnia Tuksa,
+ktÃ³ry byÅ‚ uwiÄ™ziony przez MS wkrÃ³tce przed objÄ™ciem przez nich rzÄ…dÃ³w.
 
 %package tools
 Summary:	Tools for freefroidrpg
-Summary(pl):	Narzêdzia dla freedroidrpg
+Summary(pl.UTF-8):   NarzÄ™dzia dla freedroidrpg
 Group:		X11/Applications/Games
 Requires:	%{name} = %{version}-%{release}
 
 %description tools
 Item and dialog editor for freedroidrpg with other tools.
 
-%description tools -l pl
-Edytor przedmiotów i dialogów dla freedroidrpg wraz z innymi
-narzêdziami.
+%description tools -l pl.UTF-8
+Edytor przedmiotÃ³w i dialogÃ³w dla freedroidrpg wraz z innymi
+narzÄ™dziami.
 
 %prep
 %setup -q
