@@ -3,7 +3,7 @@
 %bcond_without	tools	# without game tools
 #
 Summary:	Single player sci-fi RPG featuring Tux and evil MS bots
-Summary(pl.UTF-8):   RPG z gatunku s-f dla jednego gracza z Tuksem i złymi robotami MS
+Summary(pl.UTF-8):	RPG z gatunku s-f dla jednego gracza z Tuksem i złymi robotami MS
 Name:		freedroidrpg
 Version:	0.10.0
 Release:	1
@@ -54,7 +54,7 @@ który był uwięziony przez MS wkrótce przed objęciem przez nich rządów.
 
 %package tools
 Summary:	Tools for freefroidrpg
-Summary(pl.UTF-8):   Narzędzia dla freedroidrpg
+Summary(pl.UTF-8):	Narzędzia dla freedroidrpg
 Group:		X11/Applications/Games
 Requires:	%{name} = %{version}-%{release}
 
