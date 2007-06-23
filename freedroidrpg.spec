@@ -17,7 +17,7 @@ URL:		http://freedroid.sourceforge.net/
 BuildRequires:	SDL-devel >= 1.2.3
 BuildRequires:	SDL_image-devel
 BuildRequires:	SDL_mixer-devel
-BuildRequires:	automake
+BuildRequires:	SDL_net-devel
 BuildRequires:	gtk+-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libogg-devel
