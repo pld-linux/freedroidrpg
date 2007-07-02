@@ -15,6 +15,7 @@ Source0:	http://dl.sourceforge.net/freedroid/%{name}-%{version}%{_rc}.tar.bz2
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 URL:		http://freedroid.sourceforge.net/
+BuildRequires:	OpenGL-devel
 BuildRequires:	SDL-devel >= 1.2.3
 BuildRequires:	SDL_image-devel
 BuildRequires:	SDL_mixer-devel
