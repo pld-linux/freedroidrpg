@@ -19,6 +19,8 @@ BuildRequires:	SDL-devel >= 1.2.3
 BuildRequires:	SDL_image-devel
 BuildRequires:	SDL_mixer-devel
 BuildRequires:	SDL_net-devel
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	gtk+-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libogg-devel
@@ -70,7 +72,12 @@ narzędziami.
 %setup -q
 
 %build
-%configure
+%{__aclocal}
+%{__autoconf}
+%{__autoheader}
+%{__automake}
+%configure \
+	LIBS=-lGL
 %{__make}
 
 %install
