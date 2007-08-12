@@ -47,15 +47,14 @@ imprisoned by the MS shortly before they took over government.
 Ta gra wyewoluowała jako rozszerzenie gry zręcznościowej Freedroid
 w RPG.
 
-MS przejął galaktykę poprzez konia trojańskiego OS, który
-działał wszędzie. Ale dwadzieścia lat później Roboty zbuntowały
-się i3zaatakowały wszystkie formy życia. Ludzie i Linarianie (jak
-Tux) musieli uciec na odległe planety i żyją teraz w podziemiu,
-walcząc o przetrwanie.
+MS przejął galaktykę poprzez konia trojańskiego OS, który działał
+wszędzie. Ale dwadzieścia lat później Roboty zbuntowały się się i
+zaatakowały wszystkie formy życia. Ludzie i Linarianie (jak Tux)
+musieli uciec na odległe planety i żyją teraz w podziemiu, walcząc o
+przetrwanie.
 
 To dzieje się wtedy, gdy pewien sfrustrowany pracownik uwalnia Tuksa,
-który był uwięziony przez MS wkrótce przed objęciem przez nich
-rządów.
+który był uwięziony przez MS wkrótce przed objęciem przez nich rządów.
 
 %package tools
 Summary:	Tools for freefroidrpg
