@@ -59,7 +59,7 @@ rządów.
 
 %package tools
 Summary:	Tools for freefroidrpg
-Summary(pl.UTF-8):Narzędzia dla freedroidrpg
+Summary(pl.UTF-8):	Narzędzia dla freedroidrpg
 Group:		X11/Applications/Games
 Requires:	%{name} = %{version}-%{release}
 
