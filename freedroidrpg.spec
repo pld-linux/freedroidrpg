@@ -2,16 +2,16 @@
 # Conditional build
 %bcond_without	tools	# without game tools
 #
-%define	_rc	rc4
+%define	_rc	rc2
 Summary:	Single player sci-fi RPG featuring Tux and evil MS bots
 Summary(pl.UTF-8):	RPG z gatunku s-f dla jednego gracza z Tuksem i złymi robotami MS
 Name:		freedroidrpg
-Version:	0.10.2
+Version:	0.10.3
 Release:	0%{_rc}.1
 License:	GPL v2+
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/freedroid/%{name}-%{version}%{_rc}.tar.bz2
-# Source0-md5:	61d1885dbedfda7f77a878a7e6263114
+# Source0-md5:	572cc1fec36844d402f4db2e0603e719
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 URL:		http://freedroid.sourceforge.net/
@@ -20,6 +20,8 @@ BuildRequires:	SDL-devel >= 1.2.3
 BuildRequires:	SDL_image-devel
 BuildRequires:	SDL_mixer-devel
 BuildRequires:	SDL_net-devel
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	gtk+-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libogg-devel
@@ -46,8 +48,7 @@ Ta gra wyewoluowała jako rozszerzenie gry zręcznościowej Freedroid w
 RPG.
 
 MS przejął galaktykę poprzez konia trojańskiego OS, który działał
-wszędzie. Ale dwadzieścia lat później Roboty zbuntowały się i
-zaatakowały wszystkie formy życia. Ludzie i Linarianie (jak Tux)
+wszędzie. Ale dwadzieścia lat później Roboty zbuntowały się i3zaatakowały wszystkie formy życia. Ludzie i Linarianie (jak Tux)
 musieli uciec na odległe planety i żyją teraz w podziemiu, walcząc o
 przetrwanie.
 
@@ -71,7 +72,12 @@ narzędziami.
 %setup -q -n %{name}-%{version}%{_rc}
 
 %build
-%configure
+%{__aclocal}
+%{__autoconf}
+%{__autoheader}
+%{__automake}
+%configure \
+	LIBS=-lGL
 %{__make}
 
 %install
