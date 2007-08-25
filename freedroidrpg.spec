@@ -72,12 +72,11 @@ narzędziami.
 %setup -q
 
 %build
-%{__aclocal}
+%{__aclocal} -I m4
 %{__autoconf}
 %{__autoheader}
 %{__automake}
-%configure \
-	LIBS=-lGL
+%configure
 %{__make}
 
 %install
