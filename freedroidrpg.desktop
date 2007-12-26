@@ -1,11 +1,10 @@
 [Desktop Entry]
-Encoding=UTF-8
 Name=freedroidRPG
 Comment=Single player sci-fi RPG featuring Tux and evil MS bots
 Comment[pl]=RPG z gatunku s-f dla jednego gracza z Tuksem i złymi robotami MS
 Exec=freedroidRPG
 Terminal=false
-Icon=freedroidrpg.png
+Icon=freedroidrpg
 Type=Application
 Categories=Game;RolePlaying;
 # vi: encoding=utf-8
