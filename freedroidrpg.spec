@@ -5,12 +5,12 @@
 Summary:	Single player sci-fi RPG featuring Tux and evil MS bots
 Summary(pl.UTF-8):	RPG z gatunku s-f dla jednego gracza z Tuksem i złymi robotami MS
 Name:		freedroidrpg
-Version:	0.10.3
+Version:	0.11
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/freedroid/%{name}-%{version}.tar.bz2
-# Source0-md5:	4455c82ff65f8ff7d58853d8aff76d5b
+# Source0-md5:	9608b1a926fcf99843e0d5943e1ae050
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 URL:		http://freedroid.sourceforge.net/
@@ -21,7 +21,6 @@ BuildRequires:	SDL_mixer-devel
 BuildRequires:	SDL_net-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gtk+-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libogg-devel
 BuildRequires:	libpng-devel
@@ -97,14 +96,14 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog README
 %attr(755,root,root) %{_bindir}/freedroidRPG
 %{_datadir}/%{name}
-%{_desktopdir}/*.desktop
-%{_pixmapsdir}/*
-%{_mandir}/man6/*
+%{_desktopdir}/%{name}.desktop
+%{_pixmapsdir}/%{name}.png
+%{_mandir}/man6/freedroidRPG.6*
 
 %if %{with tools}
 %files tools
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/*Editor
 %attr(755,root,root) %{_bindir}/croppy
+%attr(755,root,root) %{_bindir}/gluem
 %attr(755,root,root) %{_bindir}/pngtoico
 %endif
