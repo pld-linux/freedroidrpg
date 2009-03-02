@@ -1,19 +1,23 @@
 #
+# TODO: - use our lua lib
+#
 # Conditional build
 %bcond_without	tools	# without game tools
 #
+%define		_rc	rc1
 Summary:	Single player sci-fi RPG featuring Tux and evil MS bots
 Summary(pl.UTF-8):	RPG z gatunku s-f dla jednego gracza z Tuksem i złymi robotami MS
 Name:		freedroidrpg
-Version:	0.11.1
-Release:	1
+Version:	0.12
+Release:	0.%{_rc}.1
 License:	GPL v2+
 Group:		X11/Applications/Games
-Source0:	http://dl.sourceforge.net/freedroid/%{name}-%{version}.tar.bz2
-# Source0-md5:	f7bb462f5bf51638f6c71722dbdb041f
+Source0:	http://dl.sourceforge.net/freedroid/%{name}-%{version}%{_rc}.tar.bz2
+# Source0-md5:	7b011ef0509ca6807fa80402c39cfd21
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 URL:		http://freedroid.sourceforge.net/
+BuildRequires:	OpenGL-GLU-devel
 BuildRequires:	OpenGL-devel
 BuildRequires:	SDL-devel >= 1.2.3
 BuildRequires:	SDL_image-devel
@@ -43,17 +47,18 @@ This is when some frustrated worker frees the Tux, who had been
 imprisoned by the MS shortly before they took over government.
 
 %description -l pl.UTF-8
-Ta gra wyewoluowała jako rozszerzenie gry zręcznościowej Freedroid w
-RPG.
+Ta gra wyewoluowała jako rozszerzenie gry zręcznościowej Freedroid
+w RPG.
 
-MS przejął galaktykę poprzez konia trojańskiego OS, który działał
-wszędzie. Ale dwadzieścia lat później Roboty zbuntowały się i
-zaatakowały wszystkie formy życia. Ludzie i Linarianie (jak Tux)
-musieli uciec na odległe planety i żyją teraz w podziemiu, walcząc o
-przetrwanie.
+MS przejął galaktykę poprzez konia trojańskiego OS, który
+działał wszędzie. Ale dwadzieścia lat później Roboty zbuntowały
+się i zaatakowały wszystkie formy życia. Ludzie i Linarianie (jak
+Tux) musieli uciec na odległe planety i żyją teraz w podziemiu,
+walcząc o przetrwanie.
 
 To dzieje się wtedy, gdy pewien sfrustrowany pracownik uwalnia Tuksa,
-który był uwięziony przez MS wkrótce przed objęciem przez nich rządów.
+który był uwięziony przez MS wkrótce przed objęciem przez nich
+rządów.
 
 %package tools
 Summary:	Tools for freefroidrpg
@@ -69,7 +74,7 @@ Edytor przedmiotów i dialogów dla freedroidrpg wraz z innymi
 narzędziami.
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}%{_rc}
 
 %build
 %{__aclocal} -I m4
