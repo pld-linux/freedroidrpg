@@ -7,12 +7,12 @@
 Summary:	Single player sci-fi RPG featuring Tux and evil MS bots
 Summary(pl.UTF-8):	RPG z gatunku s-f dla jednego gracza z Tuksem i złymi robotami MS
 Name:		freedroidrpg
-Version:	0.12.1
+Version:	0.13
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Games
-Source0:	http://dl.sourceforge.net/freedroid/%{name}-%{version}.tar.bz2
-# Source0-md5:	77fc8fb5c6080c555d90105da91c671f
+Source0:	http://downloads.sourceforge.net/freedroid/%{name}-%{version}.tar.bz2
+# Source0-md5:	9109ffb242021ee2074767a5bfad63d4
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 URL:		http://freedroid.sourceforge.net/
@@ -46,17 +46,17 @@ This is when some frustrated worker frees the Tux, who had been
 imprisoned by the MS shortly before they took over government.
 
 %description -l pl.UTF-8
-Ta gra wyewoluowała jako rozszerzenie gry zręcznościowej Freedroid
-w RPG.
+Ta gra wyewoluowała jako rozszerzenie gry zręcznościowej Freedroid w
+RPG.
 
-MS przejął galaktykę poprzez konia trojańskiego OS, który
-działał wszędzie. Ale dwadzieścia lat później Roboty zbuntowały
-się i zaatakowały wszystkie formy życia. Ludzie i Linarianie (jak
-Tux) musieli uciec na odległe planety i żyją teraz w podziemiu,
-walcząc o przetrwanie.
+MS przejął kontrolę nad galaktyką korzystając z konia trojańskiego OS,
+który rozpanoszył się po całym świecie. Ale dwadzieścia lat później
+Roboty MS zbuntowały się i zaatakowały wszystkie formy życia. Ludzie i
+Linarianie (jak Tux) musieli uciekać na odległe planety i żyją teraz w
+podziemiu, walcząc o przetrwanie.
 
-To dzieje się wtedy, gdy pewien sfrustrowany pracownik uwalnia Tuksa,
-który był uwięziony przez MS wkrótce przed objęciem przez nich
+Akcja rozgrywa się w czasie, gdy pewien sfrustrowany pracownik uwalnia
+Tuksa, który był uwięziony przez MS wkrótce przed objęciem przez nich
 rządów.
 
 %package tools
@@ -103,7 +103,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/%{name}
 %{_desktopdir}/%{name}.desktop
 %{_pixmapsdir}/%{name}.png
-%{_mandir}/man6/freedroidRPG.6*
+#%%{_mandir}/man6/freedroidRPG.6*
 
 %if %{with tools}
 %files tools
