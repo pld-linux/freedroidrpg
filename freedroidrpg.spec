@@ -56,7 +56,7 @@ Roboty MS zbuntowały się i zaatakowały wszystkie formy życia. Ludzie i
 Linarianie (jak Tux) musieli uciekać na odległe planety i żyją teraz w
 podziemiu, walcząc o przetrwanie.
 
-Akcja rozgrywa się w czasie, gdy pewien sflustrowany pracownik uwalnia
+Akcja rozgrywa się w czasie, gdy pewien sfrustrowany pracownik uwalnia
 Tuksa, który był uwięziony przez MS wkrótce przed objęciem przez nich
 rządów.
 
