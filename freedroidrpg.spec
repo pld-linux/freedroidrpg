@@ -4,7 +4,7 @@
 # Conditional build
 %bcond_without	tools	# without game tools
 #
-%define		_rc	rc1
+%define		_rc	rc3
 Summary:	Single player sci-fi RPG featuring Tux and evil MS bots
 Summary(pl.UTF-8):	RPG z gatunku s-f dla jednego gracza z Tuksem i złymi robotami MS
 Name:		freedroidrpg
@@ -13,7 +13,7 @@ Release:	0.%{_rc}.1
 License:	GPL v2+
 Group:		X11/Applications/Games
 Source0:	http://downloads.sourceforge.net/freedroid/%{name}-%{version}%{_rc}.tar.gz
-# Source0-md5:	294dc781b13de992236bcb5d4eb5dc82
+# Source0-md5:	b6a763022299e4df84e557cbf0488b71
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 URL:		http://freedroid.sourceforge.net/
@@ -104,7 +104,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/%{name}
 %{_desktopdir}/%{name}.desktop
 %{_pixmapsdir}/%{name}.png
-#%%{_mandir}/man6/freedroidRPG.6*
 
 %if %{with tools}
 %files tools
