@@ -19,6 +19,7 @@ URL:		http://freedroid.sourceforge.net/
 BuildRequires:	OpenGL-GLU-devel
 BuildRequires:	OpenGL-devel
 BuildRequires:	SDL-devel >= 1.2.3
+BuildRequires:	SDL_gfx-devel
 BuildRequires:	SDL_image-devel
 BuildRequires:	SDL_mixer-devel
 BuildRequires:	autoconf
