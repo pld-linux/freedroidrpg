@@ -104,10 +104,15 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/%{name}
 %{_desktopdir}/%{name}.desktop
 %{_pixmapsdir}/%{name}.png
+%{_mandir}/man6/freedroidRPG.6*
 
 %if %{with tools}
 %files tools
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/croppy
+%attr(755,root,root) %{_bindir}/explode_atlas
+%attr(755,root,root) %{_bindir}/explodefont
+%attr(755,root,root) %{_bindir}/gluefont
+%attr(755,root,root) %{_bindir}/make_atlas
 %attr(755,root,root) %{_bindir}/pngtoico
 %endif
