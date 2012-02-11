@@ -109,7 +109,5 @@ rm -rf $RPM_BUILD_ROOT
 %files tools
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/croppy
-%attr(755,root,root) %{_bindir}/gluem
 %attr(755,root,root) %{_bindir}/pngtoico
-%attr(755,root,root) %{_bindir}/ungluem
 %endif
