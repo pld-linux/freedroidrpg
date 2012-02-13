@@ -1,0 +1,8 @@
+--- freedroidrpg-0.15/src/Makefile.am~	2011-12-10 10:24:37.000000000 +0100
++++ freedroidrpg-0.15/src/Makefile.am	2012-02-13 16:48:36.272467850 +0100
+@@ -73,4 +73,4 @@
+ 	cd ../lua; make clean
+ 
+ ../lua/liblua.a: 
+-	cd ../lua; make CC=${CC} AR="${AR} rcu" RANLIB="${RANLIB}" liblua.a
++	cd ../lua; make CC="${CC}" AR="${AR} rcu" RANLIB="${RANLIB}" liblua.a
