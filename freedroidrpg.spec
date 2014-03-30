@@ -3,12 +3,12 @@
 #
 # Conditional build
 %bcond_without	tools	# without game tools
-#
+
 Summary:	Single player sci-fi RPG featuring Tux and evil MS bots
 Summary(pl.UTF-8):	RPG z gatunku s-f dla jednego gracza z Tuksem i złymi robotami MS
 Name:		freedroidrpg
 Version:	0.15
-Release:	4
+Release:	5
 License:	GPL v2+
 Group:		X11/Applications/Games
 Source0:	http://downloads.sourceforge.net/freedroid/%{name}-%{version}.tar.gz
@@ -32,6 +32,7 @@ BuildRequires:	libpng-devel
 BuildRequires:	libvorbis-devel
 BuildRequires:	rpm-pythonprov
 BuildRequires:	zlib-devel
+Requires:	%{name}-data = %{version}-%{release}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -61,6 +62,17 @@ Akcja rozgrywa się w czasie, gdy pewien sfrustrowany pracownik uwalnia
 Tuksa, który był uwięziony przez MS wkrótce przed objęciem przez nich
 rządów.
 
+%package data
+Summary:	Data files for the freedroidrpg game
+Group:		Applications/Games
+# noarch subpackages only when building with rpm5
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
+
+%description data
+Data files for the freedroidrpg game.
+
 %package tools
 Summary:	Tools for freefroidrpg
 Summary(pl.UTF-8):	Narzędzia dla freedroidrpg
@@ -89,12 +101,11 @@ narzędziami.
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
-
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
-install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
+cp -p %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
+cp -p %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -103,10 +114,13 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog HELP_WANTED README
 %attr(755,root,root) %{_bindir}/freedroidRPG
-%{_datadir}/%{name}
 %{_desktopdir}/%{name}.desktop
 %{_pixmapsdir}/%{name}.png
 %{_mandir}/man6/freedroidRPG.6*
+
+%files data
+%defattr(644,root,root,755)
+%{_datadir}/%{name}
 
 %if %{with tools}
 %files tools
