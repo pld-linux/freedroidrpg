@@ -66,9 +66,7 @@ rządów.
 Summary:	Data files for the freedroidrpg game
 Group:		Applications/Games
 # noarch subpackages only when building with rpm5
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description data
 Data files for the freedroidrpg game.
